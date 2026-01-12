@@ -14,3 +14,16 @@ If the number is less than or equal to zero, the function should return an empty
 */
 
 // Solution:
+function repeatStringNumTimes(str, num) {
+  let totalStr = "";
+  if(num <= 0) {
+    return "";
+  } else {
+    for(let i = 0; i < num; i++) {
+      totalStr += str
+    }
+    return totalStr;
+  }
+};
+
+console.log(repeatStringNumTimes("abc", -3));
