@@ -18,11 +18,11 @@ The function should return an array containing the largest number from each sub-
 // Solution:
 
 function largestOfAll(arr) {
-    let larNum = 0;
     let largestNumArr = [];
 
     for(let i = 0; i < arr.length; i++) {
         let insideArr = arr[i];
+        let larNum = insideArr[0];
         
         for (let i = 0; i < insideArr.length; i++) {
             if(insideArr[i] > larNum) {
@@ -38,4 +38,4 @@ function largestOfAll(arr) {
 }
 
 
-console.log(largestOfAll([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]));
+console.log(largestOfAll([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]));
