@@ -29,17 +29,25 @@
 
 // Solution:
 
-function pyramid(strCharacter, rows, bool) {
+function pyramid(strCharacter, rows, vertexDownwards) {
     let result = "\n";
 
-    if(bool) {
-        for(let i = 0; i < rows; i++) {
+    // if(vertexDownwards) {
+    //     for(let i = 0; i < rows; i++) {
+    //         result += " ".repeat(i) + strCharacter.repeat(2 * (rows - i) - 1) + "\n";
+    //     }
+    // } else {
+    //     for(let i = 0; i < rows; i++) {
+    //         result += " ".repeat(rows - i - 1) + strCharacter.repeat(2 * i + 1) + "\n";
+    //     }
+    // }
+
+    for(let i = 0; i < rows; i++) {
+        if(vertexDownwards) {
             result += " ".repeat(i) + strCharacter.repeat(2 * (rows - i) - 1) + "\n";
-        }
-    } else {
-        for(let i = 0; i < rows; i++) {
+        } else {
             result += " ".repeat(rows - i - 1) + strCharacter.repeat(2 * i + 1) + "\n";
-        }
+        }  
     }
 
     return result
