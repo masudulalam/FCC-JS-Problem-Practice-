@@ -32,7 +32,7 @@
 function pyramid(strCharacter, rows, bool) {
     let result = "\n";
 
-    if(bool === false) {
+    if(!bool) {
         for(let i = 0; i < rows; i++) {
             result += " ".repeat(rows - i - 1) + strCharacter.repeat(2 * i + 1) + "\n";
         }
