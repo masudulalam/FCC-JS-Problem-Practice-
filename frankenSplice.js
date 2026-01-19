@@ -2,9 +2,8 @@
  * 
  * 
  * Implement the Slice and Splice Algorithm
-In this lab, you will need to create an algorithm to merge two arrays.
+you will need to create an algorithm to merge two arrays.
 
-Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
 
 User Stories:
 
