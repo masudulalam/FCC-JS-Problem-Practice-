@@ -32,13 +32,13 @@
 function pyramid(strCharacter, rows, bool) {
     let result = "\n";
 
-    if(!bool) {
+    if(bool) {
         for(let i = 0; i < rows; i++) {
-            result += " ".repeat(rows - i - 1) + strCharacter.repeat(2 * i + 1) + "\n";
+            result += " ".repeat(i) + strCharacter.repeat(2 * (rows - i) - 1) + "\n";
         }
     } else {
         for(let i = 0; i < rows; i++) {
-            result += " ".repeat(i) + strCharacter.repeat(2 * (rows - i) - 1) + "\n";
+            result += " ".repeat(rows - i - 1) + strCharacter.repeat(2 * i + 1) + "\n";
         }
     }
 
