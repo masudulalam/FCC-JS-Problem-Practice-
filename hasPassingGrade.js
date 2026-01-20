@@ -29,3 +29,31 @@
 
 
 // Solution:
+
+function getAverage(scores) {
+    let totalScore = 0;
+    const scoreLength = scores.length;
+
+    for(let score of scores) {
+        totalScore += score;
+    }
+
+    const average = totalScore / scoreLength;
+
+    return average;
+}
+
+function getGrade() {
+
+}
+
+function hasPassingGrade() {
+
+}
+
+function studentMsg() {
+
+}
+
+
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
