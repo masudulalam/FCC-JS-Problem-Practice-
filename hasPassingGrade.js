@@ -61,26 +61,24 @@ function getGrade(score) {
 }
 
 function hasPassingGrade(score) {
-    if(score === 100) {
-        return true;
-    } else if(score >= 90 && score <= 99) {
-        return true;
-    } else if(score >= 80 && score <= 89) {
-        return true;
-    } else if(score >= 70 && score <= 79) {
-        return true;
-    } else if(score >= 60 && score <= 69) {
-        return true;
-    } else if(score >= 0 && score <= 59) {
+    const grade = getGrade(score);
+
+    if(grade === "F") {
         return false;
+    } else {
+        return true;
     }
 }
 
-function studentMsg() {
+function studentMsg(scores, studentScore) {
+    let average = getAverage(scores);
+    let grade = getGrade(studentScore);
 
+    return `Class average: ${average}. Your grade: ${grade}. ${hasPassingGrade(studentScore) ? "You passed the course." : "You failed the course."}`;
 }
 
 
 console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
 console.log(getGrade(60));
 console.log(hasPassingGrade(80));
+console.log(studentMsg([12, 22, 32, 42, 52, 62, 72, 92], 85));

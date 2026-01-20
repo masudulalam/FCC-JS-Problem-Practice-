@@ -49,19 +49,21 @@ function pyramid(patternChar, rows, vertexDownwards) {
     }
     */
     
-    // Now code is more readable and clean
+    // Now the code is more readable and clean
     for(let i = 0; i < rows; i++) {
+        let spaceCount;
+        let charCount;
+
         if(vertexDownwards) {
-            let spaceCount = " ".repeat(i);
-            let charCount = patternChar.repeat(2 * (rows - i) - 1);
-
-            result += spaceCount + charCount + "\n";
+            spaceCount = i;
+            charCount = 2 * (rows - i) - 1;
         } else {
-            let spaceCount = " ".repeat(rows - i - 1);
-            let charCount = patternChar.repeat(2 * i + 1);
-
-            result += spaceCount + charCount + "\n";
+            spaceCount = rows - i - 1;
+            charCount = 2 * i + 1;
         }  
+
+        let row = " ".repeat(spaceCount) + patternChar.repeat(charCount);
+        result += row + "\n"
     }
 
     return result
