@@ -14,6 +14,7 @@
     70 - 79	"C"
     60 - 69	"D"
     0 - 59	"F"
+
 * 3.You should have a function named hasPassingGrade that takes a score as a parameter and returns either true or false depending on if the score corresponds to a passing grade.
 
 * 4. The hasPassingGrade function should use the getGrade function to get the letter grade, and use it to determine if the grade is passing. A passing grade is anything different from "F".
@@ -59,8 +60,20 @@ function getGrade(score) {
     }
 }
 
-function hasPassingGrade() {
-
+function hasPassingGrade(score) {
+    if(score === 100) {
+        return true;
+    } else if(score >= 90 && score <= 99) {
+        return true;
+    } else if(score >= 80 && score <= 89) {
+        return true;
+    } else if(score >= 70 && score <= 79) {
+        return true;
+    } else if(score >= 60 && score <= 69) {
+        return true;
+    } else if(score >= 0 && score <= 59) {
+        return false;
+    }
 }
 
 function studentMsg() {
@@ -70,3 +83,4 @@ function studentMsg() {
 
 console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
 console.log(getGrade(60));
+console.log(hasPassingGrade(80));
