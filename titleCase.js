@@ -4,8 +4,6 @@ You will create a function that converts a string to title case. Title case mean
 
 "Web Development Is Awesome" is an example of a title cased string.
 
-Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
-
 User Stories:
 
 You should have a titleCase function that takes a string as an argument.
@@ -17,7 +15,19 @@ titleCase("javaScript is fun") should return "Javascript Is Fun".
 // Solution:
 
 function titleCase(str) {
-    
+    let words = str.split(" ");
+    let result = [];
+
+    for(let i = 0; i < words.length; i++) {
+        let word = words[i];
+
+        let firstChar = word[0].toUpperCase();
+        let restChars = word.slice(1).toLowerCase();
+
+        result.push(firstChar + restChars);
+    }
+
+    return result.join(" "); 
 }
 
 console.log(titleCase("javaScript is fun"));
