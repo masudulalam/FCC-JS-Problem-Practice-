@@ -27,6 +27,13 @@ function titleCase(str) {
         result.push(firstChar + restChars);
     }
 
+    // for(let word of str) {
+    //     let firstChar = word[0].toUpperCase();
+    //     let restChars = word.slice(1).toLowerCase();
+
+    //     result.push(firstChar + restChars); 
+    // }
+
     return result.join(" "); 
 }
 
